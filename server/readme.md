@@ -3,11 +3,12 @@
 ## Usage:
 
 * configure server web root to `.\hackathon`
-* Give read/write permission to `.\hackathon` for your user that runs php (e.g. `www-data`)
-    * We see that it's not usaul and safe to do so. This decision is a dirty fix for a bug on our developing server.
+* Give read/write permission to `.\hackathon` for your user that runs PHP (e.g. `www-data`)
+    * We see that it's not usual and safe to do so. This decision is a dirty fix for a bug on our developing server.
     * A fix may be provided in the future.
-* Give read/write permission to `.\upload` for your user that executes php
-* Fill In your HPE ApiKey into `.\hackathon\config.php`
+* Give read/write permission to `.\upload` for your user that executes PHP
+* Fill in your HPE ApiKey into `.\hackathon\config.php`
+* Fill in your MySQL address, username, password, data base in `.\hackathon\config.php`
 * Upload this onto your server
 
 ## Requirement:
