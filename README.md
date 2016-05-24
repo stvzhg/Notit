@@ -1,4 +1,4 @@
-# SegmentFault-Hackathon-2016-Avalanche
+# Notit by Avalanche
 
 ##About
 
