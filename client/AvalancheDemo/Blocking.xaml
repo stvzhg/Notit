@@ -1,0 +1,11 @@
+﻿<Window x:Class="AvalancheDemo.Blocking"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AvalancheDemo"
+        mc:Ignorable="d"
+        Title="Blocking" Height="133.022" Width="300" WindowStyle="None">
+    <TextBox x:Name="textBox" Margin="0" TextWrapping="Wrap" Text="Conference Video Uploading..." VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="MV Boli" FontSize="16"
+/>
+</Window>

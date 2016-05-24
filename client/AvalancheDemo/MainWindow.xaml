@@ -1,0 +1,74 @@
+﻿<Window x:Class="AvalancheDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AvalancheDemo"
+        xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+        xmlns:resx="clr-namespace:AvalancheDemo.Properties"
+        mc:Ignorable="d"
+        x:Name="thisWindow" Title="Notit" Height="500" Width="838.746" ResizeMode="NoResize" MinWidth="600" MinHeight="500" SizeToContent="WidthAndHeight" Icon="pack://siteoforigin:,,,/Resources/Logo T (1).png">
+    <Grid Margin="0,1,0,1.2" Width="698" HorizontalAlignment="Left">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Height="60" Orientation="Horizontal" Background="#FF03A9F4">
+            <Ellipse Width="{Binding Height, RelativeSource={RelativeSource Self}}" Margin="10,10,10,10" Height="40" Fill="White"/>
+            <TextBox x:Name="textBox" TextWrapping="Wrap" Text="{Binding UserName, ElementName=thisWindow}" Width="94" Margin="0,20" Background="{x:Null}" VerticalContentAlignment="Center" Foreground="White"/>
+        </StackPanel>
+        <CheckBox Content="Local Preview" Grid.Row="1" Margin="10,10,10.4,0" Click="CheckBox_Checked" VerticalAlignment="Top" Foreground="#FF212121" />
+        <Grid Grid.Row="2" Background="#FF0288D1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Button Content="Join" DockPanel.Dock="Left" Margin="0" Foreground="White" Click="JoinButton_Click" Background="#00000000" BorderBrush="{x:Null}" Height="25" HorizontalContentAlignment="Center"/>
+            <Button Content="New" DockPanel.Dock="Right" Foreground="White" Background="#00000000" BorderBrush="{x:Null}" Grid.Row="1" Height="25" VerticalContentAlignment="Top"/>
+        </Grid>
+        <Grid x:Name="videoCell" Grid.Column="1" Grid.RowSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid x:Name="remoteVideoPanel">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="200" />
+                    <RowDefinition Height="200"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <WindowsFormsHost Foreground="{x:Null}">
+                    <wf:PictureBox x:Name="pictureBox11"/>
+                </WindowsFormsHost>
+                <WindowsFormsHost Grid.Column="1" Foreground="{x:Null}">
+                    <wf:PictureBox x:Name="pictureBox12"/>
+                </WindowsFormsHost>
+                <WindowsFormsHost Grid.Row="1" Foreground="{x:Null}">
+                    <wf:PictureBox x:Name="pictureBox21"/>
+                </WindowsFormsHost>
+                <WindowsFormsHost Grid.Row="1" Grid.Column="1" Foreground="{x:Null}">
+                    <wf:PictureBox x:Name="pictureBox22"/>
+                </WindowsFormsHost>
+            </Grid>
+            <WindowsFormsHost Foreground="{x:Null}" Background="White" Width="60" Height="80" Margin="0,10,10,0" HorizontalAlignment="Right" VerticalAlignment="Top">
+                <wf:PictureBox x:Name="videoLocal"/>
+            </WindowsFormsHost>
+            <Button x:Name="endButton" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="45" Margin="152,0,151.8,-0.2" Grid.Row="1" ClipToBounds="True" Click="endButton_Click" Height="45">
+                <Button.Background>
+                    <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Stop.png" Stretch="Uniform"/>
+                </Button.Background>
+            </Button>
+        </Grid>
+        <ListBox x:Name="listBox" Grid.Column="1" Margin="348.6,0,0,9.8" Grid.RowSpan="3"/>
+        <ListBox x:Name="channelUserListBox" HorizontalAlignment="Left" Height="319" Margin="10,30,0,0" Grid.Row="1" VerticalAlignment="Top" Width="154" Foreground="#FF212121"/>
+    </Grid>
+</Window>
