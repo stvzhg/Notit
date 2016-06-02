@@ -14,7 +14,7 @@ $config['db']['password']='MYSQL_PASSWORD';
 $config['db']['database']='MYSQL_DATABASE';
 
 $config['HPEAPI']['PostURL'] = 'https://api.havenondemand.com/1/api/async/recognizespeech/v1';
-//$config['HPEAPI']['PostURL'] = 'http://59.78.36.78:8080/hackathon/api/v1/rx';
+//$config['HPEAPI']['PostURL'] = 'http://YOURSERVERIP/hackathon/api/v1/rx';
 $config['HPEAPI']['APIKey']  = 'YOUR_HPE_API_KEY';
 $config['HPEAPI']['QueryURL']= 'https://api.havenondemand.com/1/job/status/';
 
